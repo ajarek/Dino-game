@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     const dino = document.querySelector('.dino')
     const krzak = document.querySelector('.krzak')
     const krzak1 = document.querySelector('.krzak1')
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('bottom'));
         krzakLeft = parseInt(window.getComputedStyle(krzak).getPropertyValue('left'));
         krzakLeft1 = parseInt(window.getComputedStyle(krzak1).getPropertyValue('left'));
-        
+
         if (krzakLeft < 120 && krzakLeft > 80 && dinoTop <= 100) {
             wynik.innerHTML = `Game Over,  ilość punktów:  <span>${punkty}</span>`
             setTimeout("window.location.reload()", 1000);
@@ -36,4 +36,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }, 10)
-})
