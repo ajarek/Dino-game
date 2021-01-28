@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    background:url('tlo.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.dino {
+    position: absolute;
+    left: 80px;
+    bottom: 0px;
+    width: 80px;
+    height: 100px;
+    background:url('dino.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.active {
+    animation:ease 2s podskok;
+}
+
+@keyframes podskok {
+    0% {
+bottom:200px;
+   }
+    30%{
+      bottom:150px;
+    }
+50% {
+bottom:100px;
+    }
+    80%{
+bottom:50px;
+    }
+ 100% {
+
+      bottom:0px;
+}
+}
+.krzak1{
+    position: absolute;
+    left: 900px;
+    bottom: 0;
+    width: 80px;
+    height: 100px;
+    background:url('kaktus1.png');
+    background-size: cover;
+    animation:  przesuw1 5s infinite
+}
+.krzak{
+    position: absolute;
+    left: 840px;
+    bottom: 0;
+    width: 80px;
+    height: 100px;
+    background:url('kaktus.png');
+    background-size: cover;
+    animation:  przesuw 3s infinite
+}
+
+@keyframes przesuw {
+    0% {
+   left:840px;
+ }
+100% {
+    left:-40px;
+    }   
+}
+@keyframes przesuw1 {
+    0% {
+
+        left:940px;
+    }
+100% {
+
+      left:-60px;
+    }
+}
+.wynik{
+    font-size: 2rem;
+    text-align: center;
+    color:black;
+}
+span{
+    color: red;
+}
+@media(max-width:400px){
+    .container {
+        width: 400px;
+        height: 200px;
+    }
+    .dino {
+        left: 40px;
+        width: 40px;
+        height: 50px;
+      }
+      .krzak1{
+        
+        left: 450px;
+     
+        width: 40px;
+        height: 50px;
+        
+    }
+      .krzak{
+      
+        left: 420px;
+        width: 40px;
+        height: 50px;
+        
+    }
+    @keyframes podskok {
+        0% {
+    bottom:100px;
+       }
+        30%{
+          bottom:75px;
+        }
+    50% {
+    bottom:50px;
+        }
+        80%{
+    bottom:25px;
+        }
+     100% {
+    
+          bottom:0px;
+    }
+}
+    @keyframes przesuw {
+        0% {
+       left:420px;
+     }
+    100% {
+        left:-20px;
+        }   
+    }
+    @keyframes przesuw1 {
+        0% {
+    
+            left:470px;
+        }
+    100% {
+    
+          left:-30px;
+        }
+    }
+    .wynik{
+        font-size: 0.5rem;
+       text-align: center;
+    }
+
+}
